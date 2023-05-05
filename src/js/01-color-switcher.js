@@ -14,7 +14,9 @@ let timerId = null;
 document.onclick = function (e) {
   if (e.target === startBtn) {
     startBtn.setAttribute('disabled', 'true');
-  } else startBtn.removeAttribute('disabled');
+  } else if (e.target === stopBtn) {
+    startBtn.removeAttribute('disabled');
+  }
 };
 
 startBtn.addEventListener('click', () => {

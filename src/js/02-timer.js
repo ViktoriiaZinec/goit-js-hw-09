@@ -32,8 +32,10 @@ const options = {
       variables.button.removeAttribute('disabled');
     }
     variables.button.addEventListener('click', () => {
-      interval = setInterval(() => {
+      let interval = setInterval(() => {
         const diff = selectedDates[0] - new Date();
+        console.log(diff);
+
         if (diff < 1000) {
           clearInterval(interval);
         }
